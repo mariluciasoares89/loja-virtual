@@ -1,0 +1,23 @@
+[33mcommit 166162aeed2f4902296a01b6949b5bdbf9825e48[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: mariluciasoares89 <marilucia.soares@jlinformatica.net.br>
+Date:   Wed Feb 19 11:16:52 2025 -0300
+
+    Criação de classes e tabelas
+
+[33mcommit 8d5f237451380f82add32778dcd6d2c9a46c747d[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: mariluciasoares89 <marilucia.soares@jlinformatica.net.br>
+Date:   Tue Feb 18 11:50:56 2025 -0300
+
+    Criação da classe usuario e tabela elacionadas com outras duastabelas, acesso e usuario
+
+[33mcommit a9c444711135efa098ffb8c642585d8dccceef0d[m
+Author: mariluciasoares89 <marilucia.soares@jlinformatica.net.br>
+Date:   Mon Feb 17 07:58:38 2025 -0300
+
+    Acesso,CategoriaProduto,Endereco, MarcaProduto,Pessoa,PessoaFisica,PessoaJuridica,Enums
+
+[33mcommit 41581953bf6c9e56e539827fc6d6bc7c6bef1adf[m
+Author: mariluciasoares89 <marilucia.soares@jlinformatica.net.br>
+Date:   Mon Feb 17 07:49:55 2025 -0300
+
+    Adicionando README
