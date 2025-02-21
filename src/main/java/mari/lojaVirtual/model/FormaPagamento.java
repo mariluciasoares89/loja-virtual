@@ -1,8 +1,8 @@
 package mari.lojaVirtual.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,37 +10,21 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.springframework.security.core.GrantedAuthority;
-
-
-
-
 
 
 @Entity
-@Table(name = "acesso")
-@SequenceGenerator(name =  "seq_acesso", sequenceName = "seq_acesso", initialValue = 1, allocationSize = 1)
+@Table(name = "forma_pagamento")
+@SequenceGenerator(name = "seq_forma_pagamento" , sequenceName = "seq_forma_pagamento", allocationSize = 1, initialValue = 1)
+public class FormaPagamento implements Serializable{
 
 
-public class Acesso implements GrantedAuthority {
-	
-	
-	
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_acesso")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_forma_pagamento")
 	private Long id;
 	
-	
-	@Column(nullable = false, unique = true)
-	private String descricao; /*Acesso ex: ROLE_ADMIN ou ROLE_SECRETARIOS*/
-
-	@Override
-	public String getAuthority() {
-		
-		return this.descricao;
-	}
+	private String descricao;
 
 	public Long getId() {
 		return id;
@@ -71,11 +55,10 @@ public class Acesso implements GrantedAuthority {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Acesso other = (Acesso) obj;
+		FormaPagamento other = (FormaPagamento) obj;
 		return Objects.equals(id, other.id);
 	}
+
 	
-
-
+	
 }
-
