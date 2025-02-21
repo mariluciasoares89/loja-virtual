@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "cup_desconto")
 @SequenceGenerator(name = "seq_cup_desconto" , sequenceName = "seq_cup_desconto", allocationSize = 1, initialValue = 1)
-public class CupDesconto implements Serializable {
+public class CupDesc implements Serializable {
 
 
 	private static final long serialVersionUID = 1L;
@@ -104,7 +104,7 @@ public class CupDesconto implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CupDesconto other = (CupDesconto) obj;
+		CupDesc other = (CupDesc) obj;
 		return Objects.equals(id, other.id);
 	}
 	

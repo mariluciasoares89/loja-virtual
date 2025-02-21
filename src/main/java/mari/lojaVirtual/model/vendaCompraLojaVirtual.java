@@ -55,4 +55,8 @@ public class vendaCompraLojaVirtual implements Serializable {
 	private NotaFiscalVenda notaFiscalVenda;
 	
 	
+	@ManyToOne
+	@JoinColumn(name = "cupom_desconto_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "cupom_desconto_FK"))
+	private CupDesc cupDesc;
+	
 }
