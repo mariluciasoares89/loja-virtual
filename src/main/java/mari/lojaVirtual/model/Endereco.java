@@ -3,6 +3,7 @@ package mari.lojaVirtual.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -35,19 +36,33 @@ import mari.lojaVirtual.enums.TipoEnderco;
 		@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_endereco")
 		private Long id;
 		
+
+		@Column(nullable = false)
 		private String ruaLogra;
 		
+		
+
+		@Column(nullable = false)
 		private String cep;
 		
+
+		@Column(nullable = false)
 		private String numero;
 		
 		private String complemento;
 		
 
+		@Column(nullable = false)
         private String uf;
 		
+		
+
+		@Column(nullable = false)
 		private String cidade;
 		
+
+		@Column(nullable = false)
+		private String bairro;
 		
 		@ManyToOne(targetEntity = Pessoa.class)
 		@JoinColumn(name = "pessoa_id", nullable = false, foreignKey = @ForeignKey(value = ConstraintMode.CONSTRAINT, name = "pessoa_FK"))
@@ -167,6 +182,12 @@ import mari.lojaVirtual.enums.TipoEnderco;
 				return false;
 			Endereco other = (Endereco) obj;
 			return Objects.equals(id, other.id);
+		}
+		public String getBairro() {
+			return bairro;
+		}
+		public void setBairro(String bairro) {
+			this.bairro = bairro;
 		}
 		
 		

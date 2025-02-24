@@ -3,6 +3,7 @@ package mari.lojaVirtual.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
@@ -11,7 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -28,6 +28,7 @@ public class ItemVendaLoja implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_item_venda_loja")
 	private Long id;
+	
 	
 	
 	public Long getId() {
@@ -70,6 +71,7 @@ public class ItemVendaLoja implements Serializable{
 	}
 
 
+	@Column(nullable = false)
 	private Double quantidade;
 	
 	@ManyToOne
