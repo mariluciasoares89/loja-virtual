@@ -1,5 +1,6 @@
 package mari.lojaVirtual.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -14,14 +15,20 @@ public class PessoaJuridica extends Pessoa {
 
 	private static final long serialVersionUID = 1L;
 
+	@Column(nullable = false)
 	private String cnpj;
 	
-	private String insEstadual;
 	
-	private String insMunicipal;
+	@Column(nullable = false)
+	private String inscEstadual;
 	
+	
+	private String inscMunicipal;
+	
+	@Column(nullable = false)
 	private String nomeFantasia;
 	
+	@Column(nullable = false)
 	private String razaoSocial;
 	
 	private String categoria;
@@ -34,20 +41,20 @@ public class PessoaJuridica extends Pessoa {
 		this.cnpj = cnpj;
 	}
 
-	public String getInsEstadual() {
-		return insEstadual;
+	public String getInscEstadual() {
+		return inscEstadual;
 	}
 
-	public void setInsEstadual(String insEstadual) {
-		this.insEstadual = insEstadual;
+	public void setInscEstadual(String inscEstadual) {
+		this.inscEstadual = inscEstadual;
 	}
 
-	public String getInsMunicipal() {
-		return insMunicipal;
+	public String getInscMunicipal() {
+		return inscMunicipal;
 	}
 
-	public void setInsMunicipal(String insMunicipal) {
-		this.insMunicipal = insMunicipal;
+	public void setInscMunicipal(String inscMunicipal) {
+		this.inscMunicipal = inscMunicipal;
 	}
 
 	public String getNomeFantasia() {

@@ -31,11 +31,11 @@ public class ImagemProduto implements Serializable{
 	private Long id;
 	
 	
-	@Column(columnDefinition = "text")
+	@Column(columnDefinition = "text", nullable = false)
 	private String imagemOriginal;
 	
 	
-	@Column(columnDefinition = "text")
+	@Column(columnDefinition = "text", nullable = false)
 	private String imagemMiniatura;
 	
 	

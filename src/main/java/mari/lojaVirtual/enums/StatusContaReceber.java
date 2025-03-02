@@ -3,7 +3,7 @@ package mari.lojaVirtual.enums;
 public enum StatusContaReceber {
 
 	COBRANCA("Pagar"),
-	VENCIDA("Venciada"),
+	VENCIDA("Vencida"),
 	ABERTA("Aberta"),
 	QUITADA("Quitada");
 	
