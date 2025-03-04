@@ -33,7 +33,7 @@ public class Acesso implements GrantedAuthority {
 	private Long id;
 	
 	
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false)
 	private String descricao; /*Acesso ex: ROLE_ADMIN ou ROLE_SECRETARIOS*/
 
 	@Override
